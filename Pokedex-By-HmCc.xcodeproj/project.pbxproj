@@ -59,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				3B84D26C1DA038EA007A9E46 /* Model */,
+				3B84D26F1DA0456B007A9E46 /* View */,
 				3B84D2581DA02854007A9E46 /* AppDelegate.swift */,
 				3B84D25A1DA02854007A9E46 /* ViewController.swift */,
 				3B84D26A1DA037E0007A9E46 /* pokemon.csv */,
@@ -76,6 +77,13 @@
 				3B84D26D1DA03CE1007A9E46 /* Pokemon.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		3B84D26F1DA0456B007A9E46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
