@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="WX2-3R-Gfr">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnC-4a-C3m">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                 <color key="backgroundColor" red="1" green="0.27778649459999999" blue="0.31884287430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -24,7 +27,11 @@
                                     <constraint firstAttribute="height" constant="55" id="Gay-Uc-Gdv"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dun-QP-toS">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="dLU-Qe-pjT">
+                                <rect key="frame" x="0.0" y="55" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dun-QP-toS">
                                 <rect key="frame" x="20" y="123" width="335" height="524"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vrf-03-lMZ">
@@ -34,7 +41,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fZF-VJ-6Gf" customClass="PokeCell" customModule="Pokedex_By_HmCc" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="fZF-VJ-6Gf" customClass="PokeCell" customModule="Pokedex_By_HmCc" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -74,33 +81,25 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="dLU-Qe-pjT">
-                                <rect key="frame" x="0.0" y="55" width="375" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="WX2-3R-Gfr">
-                                <rect key="frame" x="0.0" y="99" width="375" height="568"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bnC-4a-C3m" secondAttribute="trailing" id="6Sd-5l-isa"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WX2-3R-Gfr" secondAttribute="bottom" id="6md-5K-Rkl"/>
                             <constraint firstAttribute="trailing" secondItem="dun-QP-toS" secondAttribute="trailing" constant="20" id="9GY-WE-kRl"/>
                             <constraint firstItem="dun-QP-toS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="AMs-rL-lDy"/>
                             <constraint firstItem="bnC-4a-C3m" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="INc-LC-veI"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dun-QP-toS" secondAttribute="bottom" constant="20" id="MO6-dZ-5p1"/>
-                            <constraint firstItem="WX2-3R-Gfr" firstAttribute="top" secondItem="dLU-Qe-pjT" secondAttribute="bottom" id="Vyw-4y-roX"/>
                             <constraint firstItem="bnC-4a-C3m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WC7-WS-8XG"/>
                             <constraint firstItem="dLU-Qe-pjT" firstAttribute="top" secondItem="bnC-4a-C3m" secondAttribute="bottom" id="clA-3t-r8n"/>
-                            <constraint firstItem="WX2-3R-Gfr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cst-MP-SFB"/>
                             <constraint firstItem="dun-QP-toS" firstAttribute="top" secondItem="dLU-Qe-pjT" secondAttribute="bottom" constant="20" id="hfD-j5-AOg"/>
                             <constraint firstItem="dLU-Qe-pjT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pQF-fI-Fd7"/>
                             <constraint firstAttribute="trailing" secondItem="dLU-Qe-pjT" secondAttribute="trailing" id="yc6-FH-gcg"/>
-                            <constraint firstAttribute="trailing" secondItem="WX2-3R-Gfr" secondAttribute="trailing" id="z6F-IV-6fM"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="collection" destination="dun-QP-toS" id="ifE-7a-oub"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
