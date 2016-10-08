@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="WX2-3R-Gfr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="WX2-3R-Gfr">
                                 <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnC-4a-C3m">
@@ -90,9 +90,13 @@
                             <constraint firstItem="bnC-4a-C3m" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="INc-LC-veI"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dun-QP-toS" secondAttribute="bottom" constant="20" id="MO6-dZ-5p1"/>
                             <constraint firstItem="bnC-4a-C3m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WC7-WS-8XG"/>
+                            <constraint firstItem="WX2-3R-Gfr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="aUQ-tB-MSe"/>
                             <constraint firstItem="dLU-Qe-pjT" firstAttribute="top" secondItem="bnC-4a-C3m" secondAttribute="bottom" id="clA-3t-r8n"/>
                             <constraint firstItem="dun-QP-toS" firstAttribute="top" secondItem="dLU-Qe-pjT" secondAttribute="bottom" constant="20" id="hfD-j5-AOg"/>
                             <constraint firstItem="dLU-Qe-pjT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pQF-fI-Fd7"/>
+                            <constraint firstAttribute="trailing" secondItem="WX2-3R-Gfr" secondAttribute="trailing" id="tWm-jN-sHL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WX2-3R-Gfr" secondAttribute="bottom" id="wJD-j5-bo6"/>
+                            <constraint firstItem="WX2-3R-Gfr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xLu-et-TaZ"/>
                             <constraint firstAttribute="trailing" secondItem="dLU-Qe-pjT" secondAttribute="trailing" id="yc6-FH-gcg"/>
                         </constraints>
                     </view>
