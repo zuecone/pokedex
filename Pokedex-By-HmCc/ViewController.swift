@@ -74,9 +74,9 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PokeCell", forIndexPath: indexPath) as? PokeCell{
             
             let poke: Pokemon!
-            print("Pokemon: \(pokemon.count)")
-            print("Filtered Pokemon: \(filteredPokemon.count)")
-            print("indexPath: \(indexPath.row)")
+//            print("Pokemon: \(pokemon.count)")
+//            print("Filtered Pokemon: \(filteredPokemon.count)")
+//            print("indexPath: \(indexPath.row)")
             
             if isInSearchMode{
                 poke = filteredPokemon[indexPath.row]

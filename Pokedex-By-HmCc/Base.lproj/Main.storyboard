@@ -19,8 +19,8 @@
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
-            <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue</string>
         </mutableArray>
         <mutableArray key="Pokemon.ttf">
@@ -409,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGo-ZJ-hte" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="811.5" y="579.5"/>
+            <point key="canvasLocation" x="772.5" y="560.5"/>
         </scene>
     </scenes>
     <resources>

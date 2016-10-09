@@ -1,0 +1,6 @@
+framework module Pods_Pokedex_By_HmCc {
+  umbrella header "Pods-Pokedex-By-HmCc-umbrella.h"
+
+  export *
+  module * { export * }
+}
