@@ -15,7 +15,7 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var pokeLabel: UILabel!
     
     override func viewDidLoad() {
-        pokeLabel.text = pokemon.name
+        pokeLabel.text = pokemon.name.capitalizedString
     }
     
     
