@@ -19,8 +19,8 @@
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
-            <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue</string>
             <string>HelveticaNeue</string>
         </mutableArray>
         <mutableArray key="Pokemon.ttf">
@@ -190,6 +190,9 @@
                                             <constraint firstAttribute="height" constant="23" id="WNL-xF-ceH"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="Gcw-aq-fzB" eventType="touchUpInside" id="cbI-Hu-xSf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.27778649459999999" blue="0.31884287430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -222,6 +225,25 @@
                                     <constraint firstAttribute="height" constant="22" id="its-yl-KUu"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kf0-yd-AP6">
+                                <rect key="frame" x="16" y="484" width="343" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="101" translatesAutoresizingMaskIntoConstraints="NO" id="YhT-PS-oRW">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="RmT-ed-fIf"/>
+                                            <constraint firstAttribute="width" constant="100" id="SPp-MK-2o1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="145" translatesAutoresizingMaskIntoConstraints="NO" id="7Lx-WK-N1E">
+                                        <rect key="frame" x="172" y="0.0" width="171" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="88m-aI-JNT"/>
+                                            <constraint firstAttribute="height" constant="100" id="lw7-vA-RNm"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ztp-9Q-cUH">
                                 <rect key="frame" x="20" y="63" width="335" height="295"/>
                                 <subviews>
@@ -351,25 +373,6 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kf0-yd-AP6">
-                                <rect key="frame" x="16" y="484" width="343" height="100"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="101" translatesAutoresizingMaskIntoConstraints="NO" id="YhT-PS-oRW">
-                                        <rect key="frame" x="0.0" y="0.0" width="172" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="RmT-ed-fIf"/>
-                                            <constraint firstAttribute="width" constant="100" id="SPp-MK-2o1"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="145" translatesAutoresizingMaskIntoConstraints="NO" id="7Lx-WK-N1E">
-                                        <rect key="frame" x="172" y="0.0" width="171" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="88m-aI-JNT"/>
-                                            <constraint firstAttribute="height" constant="100" id="lw7-vA-RNm"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -390,7 +393,18 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="baseAttackLbl" destination="JTf-yA-KqW" id="2aR-uD-exH"/>
+                        <outlet property="currentEvoImg" destination="YhT-PS-oRW" id="tnu-R2-iZZ"/>
+                        <outlet property="defenceLbl" destination="VAd-Rh-2LC" id="4YP-d7-Xrb"/>
+                        <outlet property="descriptionLbl" destination="Dab-tP-iCq" id="8UY-xx-Pzl"/>
+                        <outlet property="evoLbl" destination="Jio-Rz-KTs" id="ztX-fI-nji"/>
+                        <outlet property="heightLbl" destination="vA5-Q4-2ah" id="dav-qn-Pig"/>
+                        <outlet property="mainImg" destination="EPy-um-fAH" id="V9Q-QV-EhU"/>
+                        <outlet property="nextEvoImg" destination="7Lx-WK-N1E" id="Nxm-R4-b8M"/>
                         <outlet property="pokeLabel" destination="lx8-lQ-f7I" id="pZh-Ky-uk2"/>
+                        <outlet property="pokedexIdLbl" destination="tJ0-m2-mh9" id="YZN-0t-yEv"/>
+                        <outlet property="typeLbl" destination="Swo-5S-E9W" id="JSo-XJ-6qg"/>
+                        <outlet property="weightLbl" destination="eEU-OO-reR" id="0iw-ac-X0T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGo-ZJ-hte" userLabel="First Responder" sceneMemberID="firstResponder"/>
