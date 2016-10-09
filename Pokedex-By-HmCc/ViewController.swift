@@ -92,6 +92,17 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        let  poke: Pokemon!
+        if isInSearchMode{
+            poke = filteredPokemon[indexPath.row]
+        }
+        else{
+            poke = pokemon[indexPath.row]
+        }
+        
+        print(poke.name)
+        performSegueWithIdentifier("PokemonDetailVC", sender: poke)
+        
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -139,5 +150,16 @@ class ViewController: UIViewController, UICollectionViewDelegate,UICollectionVie
         
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PokemonDetailVC"{
+            if let detailsVC = segue.destinationViewController as? PokemonDetailVC{
+                if let poke = sender as? Pokemon{
+                    detailsVC.pokemon = poke
+                }
+            }
+        }
+    }
+    
 }
 
