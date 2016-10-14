@@ -54,16 +54,16 @@ class Pokemon {
                     self._height = height
                 }
                 
-                if let attack = dict["attack"] as? String {
+                if let attack = dict["attack"] as? Int {
                     self._attack = "\(attack)"
                 }
                 
-                if let defense = dict["defense"] as? String {
+                if let defense = dict["defense"] as? Int {
                     self._defense = "\(defense)"
                 }
                 
-                //print(self._defense)
-                //print(self._attack)
+                print(self._defense)
+                print(self._attack)
                 print(self._height)
                 print(self._weight)
                 
@@ -87,6 +87,7 @@ class Pokemon {
                     
                     print(self._type)
                 }
+
                 
             }
             
